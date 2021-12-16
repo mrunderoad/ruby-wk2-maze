@@ -6,5 +6,15 @@
 <li><a href='/room9'>Go North</a></li>
 <li><a href='/room6'>Go South</a></li>
 <li><a href='/room9'>Go East</a></li>
-<li><a href='/room8'>Go West</a></li>
+<% if @key == true %>
+  <li><a href='/room8'>Go West</a></li>
+<% else %>
+  <li><a href='/room9'>Go West</a></li>
+<% end %>
+<li> <%= @key %> </li>
 </ul>
+
+<hr>
+<h3>&squ;&squ;&#9632;</h3>
+<h3>&squ;&squ;&squ;</h3>
+<h3>&squ;&squ;&squ;</h3>

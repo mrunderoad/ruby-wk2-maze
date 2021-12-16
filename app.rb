@@ -8,7 +8,7 @@ get '/' do
 end
 
 get '/room' do
-  name = params[:player_name]
+  @name = params[:player_name]
   erb(:room)
 end
 
@@ -25,6 +25,11 @@ get '/room2' do
 end
 
 get '/room3' do
+  erb(:room3)
+end
+
+post '/room3/key' do
+  @key = true
   erb(:room3)
 end
 

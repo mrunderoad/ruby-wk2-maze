@@ -3,10 +3,16 @@ class Maze
   @@rooms = {}
   @@total_rows = 0
   @@name
+  @@key
 
   def intialize(id, name)
     @id = id || @@total_rows += 1
     @name = name
+    @key = "false"
+  end
+
+  def self.get_key
+    @@key = true
   end
 
   def self.all
