@@ -2,9 +2,11 @@ class Maze
 
   @@rooms = {}
   @@total_rows = 0
+  @@name
 
-  def intialize(id)
+  def intialize(id, name)
     @id = id || @@total_rows += 1
+    @name = name
   end
 
   def self.all
@@ -16,7 +18,7 @@ class Maze
   end
 
   def save
-    @@rooms[self.id] = Maze.new()
+    @@rooms[self.id] = Maze.new(self.name)
   end
 
   def self.clear

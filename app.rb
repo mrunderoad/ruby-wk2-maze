@@ -8,6 +8,7 @@ get '/' do
 end
 
 get '/room' do
+  name = params[:player_name]
   erb(:room)
 end
 
